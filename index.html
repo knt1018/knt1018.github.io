@@ -115,6 +115,12 @@
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             margin-bottom: 20px;
+            background: #f0f0f0;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
         }
 
         .video-container {
@@ -135,6 +141,52 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+
+        .education-item, .experience-item {
+            background: white;
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .education-item h6, .experience-item h6 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .education-item .meta, .experience-item .meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .education-item ul, .experience-item ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .education-item li, .experience-item li {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .award-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            color: #333;
+            font-size: 0.95rem;
         }
         
         footer {
@@ -192,12 +244,15 @@
             <div class="profile-section">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <img src="images/profile.jpg" alt="Kambell Twitty" class="profile-image">
+                        <div class="profile-image">
+                            <img src="images/profile.jpg" alt="Kambell Twitty" class="profile-image" style="width: 100%; height: auto; background: transparent;">
+                        </div>
                     </div>
                     <div class="col-lg-6">
                         <h2 class="section-title">Welcome!</h2>
                         <p>Hi! I'm Kambell, a passionate student at Brigham Young University pursuing a degree in Experience & Design Management with a focus on sports management. I'm driven by leadership, adventure, and the desire to make a positive impact on those around me.</p>
-                        <p>Beyond academics, I'm a certified free diving shark diver, a fluent French speaker, and someone who's lived internationally for over 13 years. I'm committed to personal growth and exploring new experiences.</p>
+                        <p>Beyond academics, I'm a certified free diving shark diver, fluent in French with beginner-level Finnish, and someone who's lived internationally for over 13 years. I'm committed to personal growth and exploring new experiences.</p>
+                        <p><strong>Connect with me:</strong> <a href="https://instagram.com/kambell.twitty" target="_blank" style="color: var(--primary-color);"><i class="fab fa-instagram"></i> @kambell.twitty</a></p>
                     </div>
                 </div>
             </div>
@@ -240,14 +295,14 @@
                     <div class="fact-card">
                         <div class="fact-icon"><i class="fas fa-globe"></i></div>
                         <h5>Global Experience</h5>
-                        <p>13+ years living overseas | Fluent in French</p>
+                        <p>13+ years living overseas | Fluent in French & Beginner Finnish</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="fact-card">
                         <div class="fact-icon"><i class="fas fa-family"></i></div>
                         <h5>Family</h5>
-                        <p>Middle child of 5 | Uncle/Aunt to a niece and nephew</p>
+                        <p>Middle child of 5 | Aunt to a niece and nephew</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -299,35 +354,113 @@
         <div class="container">
             <h2 class="section-title">Resume</h2>
             
+            <!-- Education -->
             <div class="row">
-                <div class="col-lg-6">
-                    <h4 style="color: var(--primary-color); margin-top: 30px;">Education</h4>
-                    <div style="background: white; padding: 20px; border-left: 4px solid var(--accent-color); margin-bottom: 20px; border-radius: 5px;">
-                        <h5>Brigham Young University</h5>
-                        <p class="mb-1"><strong>Major:</strong> Experience & Design Management</p>
-                        <p class="mb-1"><strong>Focus:</strong> Sports Management</p>
-                        <p class="text-muted">Expected Graduation: TBD</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <h4 style="color: var(--primary-color); margin-top: 30px;">Certifications & Skills</h4>
-                    <div style="background: white; padding: 20px; border-left: 4px solid var(--accent-color); margin-bottom: 20px; border-radius: 5px;">
-                        <h5>Certifications</h5>
-                        <p class="mb-1">• Free Diving Shark Diver (Certified)</p>
-                        <p class="mb-1">• LDS Mission Service (Summer 2026 - Helsinki, Finland)</p>
-                    </div>
+                <div class="col-12">
+                    <h4 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 20px;"><i class="fas fa-graduation-cap"></i> Education</h4>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <h4 style="color: var(--primary-color); margin-top: 30px;">Skills</h4>
+                    <div class="education-item">
+                        <h6>Brigham Young University – Marriott School of Business</h6>
+                        <div class="meta">Sep 2025 - Apr 2029 | Provo, Utah</div>
+                        <p><strong>Pre-Business: Experience and Design Management Applicant</strong></p>
+                        <p>Scandinavian Studies Minor</p>
+                        <ul>
+                            <li>BYU GPA: 3.33</li>
+                            <li>Total GPA: 3.35</li>
+                        </ul>
+                    </div>
+
+                    <div class="education-item">
+                        <h6>American Fork High School</h6>
+                        <div class="meta">Aug 2024 - May 2025 | American Fork, Utah</div>
+                        <ul>
+                            <li>High School Degree</li>
+                            <li>GPA: 3.97</li>
+                            <li>Honor Roll Recipient (9-12th grade)</li>
+                            <li>National Honor Society Member</li>
+                        </ul>
+                    </div>
+
+                    <div class="education-item">
+                        <h6>Tirana International School</h6>
+                        <div class="meta">Aug 2021 - May 2024 | Tirana, Albania</div>
+                        <p><strong>High School Freshman through Junior Year</strong></p>
+                        <ul>
+                            <li>GPA: 3.95</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="row">
+                <div class="col-12">
+                    <h4 style="color: var(--primary-color); margin-top: 40px; margin-bottom: 20px;"><i class="fas fa-briefcase"></i> Experience</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="experience-item">
+                        <h6>Swig</h6>
+                        <div class="meta">Jan 2025 - Apr 2026 | American Fork, Utah</div>
+                        <p><strong>Shift Lead + Team Member</strong></p>
+                        <ul>
+                            <li>Managed drive-thru and walk-in orders during peak hours, lowering wait times and preparing orders to exact recipes/portions</li>
+                            <li>Delivered personalized customer service while demonstrating multitasking and time management</li>
+                            <li>Monitored team sales goals and celebrated exceeding sales performance, contributed to 30-35% of store's tip percentage</li>
+                            <li>Organized, restocked, dated, and unloaded Sysco inventory with approximately 500 units, aligned with seasonal availability and customer trends to maximize accessibility and drive sales</li>
+                            <li>Trained and coached new hires on daily cleaning routines, station resets, register operations, customer order accuracy, upselling, drink recipe systems, and shift expectations</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h6>Milkshake Factory</h6>
+                        <div class="meta">Aug 2024 - Mar 2025 | Pleasant Grove, Utah</div>
+                        <p><strong>Team Member</strong></p>
+                        <ul>
+                            <li>Promoted seasonal products through personalized flavor pairings and ingredient knowledge with allergy-conscious service</li>
+                            <li>Built customer relationships by recognizing returning guests, recalling usual orders and preferences, and assisting with special occasions through tailored recommendations</li>
+                            <li>Enrolled and maintained hundreds of returning customer loyalty accounts with accurate information input and seamless setup</li>
+                            <li>Increased retention by explaining customer benefits, exclusive offers, and reward opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h6>Athletic Administration Assistant</h6>
+                        <div class="meta">Jan 2022 - Apr 2024 | Tirana, Albania</div>
+                        <p><strong>Tournament Coordinator, Scorekeeper, and Statistician</strong></p>
+                        <ul>
+                            <li>Coordinated detailed game schedules, assigned referees to correct courts, communicated timing with coaches, and managed break periods and transitions</li>
+                            <li>Organized teams, coaches, and staff during C.E.E.S.A. International Tournaments</li>
+                            <li>Compiled and reported detailed performance statistics to teams of 10 athletes for strategic planning and performance improvement</li>
+                            <li>Coached and mentored players during games for long-term learning and development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="row">
+                <div class="col-12">
+                    <h4 style="color: var(--primary-color); margin-top: 40px; margin-bottom: 20px;"><i class="fas fa-star"></i> Skills</h4>
                     <div style="background: white; padding: 20px; border-radius: 5px;">
+                        <div style="margin-bottom: 20px;">
+                            <strong>Core Competencies:</strong><br>
+                            <span class="skill-badge">Teamwork</span>
+                            <span class="skill-badge">Organization</span>
+                            <span class="skill-badge">Communication</span>
+                            <span class="skill-badge">Flexibility</span>
+                        </div>
                         <div style="margin-bottom: 20px;">
                             <strong>Languages:</strong><br>
                             <span class="skill-badge">French (Fluent)</span>
                             <span class="skill-badge">English (Native)</span>
+                            <span class="skill-badge">Finnish (Beginner)</span>
                         </div>
                         <div style="margin-bottom: 20px;">
                             <strong>Athletic Skills:</strong><br>
@@ -346,9 +479,25 @@
                 </div>
             </div>
 
+            <!-- Awards -->
             <div class="row">
                 <div class="col-12">
-                    <h4 style="color: var(--primary-color); margin-top: 30px;">International Experience</h4>
+                    <h4 style="color: var(--primary-color); margin-top: 40px; margin-bottom: 20px;"><i class="fas fa-trophy"></i> Awards & Recognition</h4>
+                    <div class="awards-grid">
+                        <div class="award-item">Advanced Placement Scholar with Honor Award</div>
+                        <div class="award-item">Advanced Placement Scholar Award</div>
+                        <div class="award-item">Seal of Bi-literacy Recipient</div>
+                        <div class="award-item">C.E.E.S.A. 3x Athlete MVP</div>
+                        <div class="award-item">American Foreign Service Association Merit Scholarship Recipient</div>
+                        <div class="award-item">Prague Model United Nations Delegate</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- International Experience -->
+            <div class="row">
+                <div class="col-12">
+                    <h4 style="color: var(--primary-color); margin-top: 40px; margin-bottom: 20px;"><i class="fas fa-globe"></i> International Experience</h4>
                     <div style="background: white; padding: 20px; border-left: 4px solid var(--accent-color); margin-bottom: 20px; border-radius: 5px;">
                         <p><strong>Global Background:</strong> 13+ years of international living experience</p>
                         <p><strong>Cultural Competency:</strong> Multilingual, cross-cultural communication skills developed through diverse international exposure</p>
@@ -366,7 +515,7 @@
             <div class="social-links">
                 <a href="https://www.linkedin.com" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.github.com/knt1018" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://instagram.com/kambell.twitty" title="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
             <p style="margin-top: 30px; margin-bottom: 0;">© 2026 Kambell Twitty. All rights reserved.</p>
         </div>
